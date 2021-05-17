@@ -1,4 +1,8 @@
 module ComplexOperations
+
+export complex_multiply
+export complex_divide
+
 """
     Multiplication of two vectors Z1 and Z2.
 We assume the first and second columns of each vector are the real and imaginary parts, respectively
