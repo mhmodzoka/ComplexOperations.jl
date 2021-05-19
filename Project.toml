@@ -2,3 +2,6 @@ name = "ComplexOperations"
 uuid = "45c10c9a-3fea-40aa-8a0f-0e2f7025918e"
 authors = ["Mahmoud Elzouka <mhmodzoka@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
