@@ -1,9 +1,6 @@
 using ComplexOperations
 using LinearAlgebra
 
-
-
-
 # testing complex_matrix_inversion
 A = rand(3, 3); B = rand(3, 3)
 @time for i = 1:1e6; C, D = complex_matrix_inversion(A, B); end
