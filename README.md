@@ -17,8 +17,4 @@ Operations include:
 
 The package should be registered, and can be installed by executing the following command:
 
-`using Pkg; Pkg.add(ComplexOperations)`
-
-If this fails (e.g., if registering the package didn't work), then you can install it by opening an interactive julia session, and type the following command:
-
-`using Pkg; Pkg.add(url="https://github.com/mhmodzoka/ComplexOperations.jl")`
+`using Pkg; Pkg.add("ComplexOperations")`
