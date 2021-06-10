@@ -15,6 +15,6 @@ Operations include:
 
 # Installation
 
-The package should be registered, and can be installed by executing the following command:
+The package is registered, and can be installed by executing the following command:
 
 `using Pkg; Pkg.add("ComplexOperations")`
