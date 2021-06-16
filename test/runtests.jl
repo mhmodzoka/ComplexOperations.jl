@@ -78,6 +78,7 @@ println(); println("A is complex, B is real")
 
 
 #################### which approach is best for complex matrix inversion?
+println(); println("check which matrix inversion method is the best")
 function complex_matrix_inversion_1(A::AbstractMatrix{R}, B::AbstractMatrix{R}) where R <: Real
     @fastmath @inbounds inv_A_B = inv(A) * B
     @fastmath @inbounds C = inv(A + B * inv_A_B)
@@ -95,6 +96,6 @@ function complex_matrix_inversion_3(A::AbstractMatrix{R}, B::AbstractMatrix{R}) 
 end
 
 dim_ = 5
-@time for i = 1:1e4; A, B = rand(dim_, dim_), rand(dim_, dim_); complex_matrix_inversion_1(A, B); end
-@time for i = 1:1e4; A, B = rand(dim_, dim_), rand(dim_, dim_); complex_matrix_inversion_2(A, B); end
-@time for i = 1:1e4; A, B = rand(dim_, dim_), rand(dim_, dim_); complex_matrix_inversion_3(A, B); end
+@time for i = 1:1e4; complex_matrix_inversion_1(rand(dim_, dim_), rand(dim_, dim_)); end
+@time for i = 1:1e4; complex_matrix_inversion_2(rand(dim_, dim_), rand(dim_, dim_)); end
+@time for i = 1:1e4; complex_matrix_inversion_3(rand(dim_, dim_), rand(dim_, dim_)); end
