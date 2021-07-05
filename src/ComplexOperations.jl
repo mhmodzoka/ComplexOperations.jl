@@ -2,6 +2,8 @@ module ComplexOperations
 
 using StaticArrays
 
+export conjugate
+
 export complex_multiply
 export complex_multiply_SMatrix
 
@@ -16,6 +18,18 @@ export complex_vector_cross_product_SMatrix
 
 export complex_matrix_inversion
 export complex_matrix_multiplication
+
+# Conjugate -----------------------------------------------------------------------------------
+"""
+    Calculate conjugate of imaginary number
+"""
+function conjugate(a::R, b::R) where R <: Real
+    return hcat(a, -b)
+end
+
+function conjugate(a::AbstractVecOrMat{R}, b::AbstractVecOrMat{R}) where R <: Real       
+    return hcat(a, -b)
+end
 
 # Scalar multiplication -----------------------------------------------------------------------------------
 """
